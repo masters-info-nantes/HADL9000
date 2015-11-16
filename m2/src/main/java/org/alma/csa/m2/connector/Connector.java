@@ -9,18 +9,21 @@ import org.alma.csa.m2.exceptions.HADLMinimumMultiplicityException;
 
 public abstract class Connector {
 	
-	private List<Role> roles = new ArrayList<Role>();
+	private List<Role> rolesFrom = new ArrayList<Role>();
+	private List<Role> rolesTo = new ArrayList<Role>();
 	
 	public Connector(Role...roles) throws Exception {
-		boolean fromMin = false, toMin = false;
 		for(Role r:roles) {
-			this.roles.add(r);
 			switch(r.direction) {
-				case FROM: fromMin=true;break;
-				case TO: toMin=true;break;
+				case FROM:
+					this.rolesFrom.add(r);
+					break;
+				case TO:
+					this.rolesTo.add(r);
+					break;
 			}
 		}
-		if(!fromMin||!toMin) {
+		if(rolesFrom.isEmpty() || rolesTo.isEmpty()) {
 			throw new HADLMinimumMultiplicityException("roles");
 		}
 	}
