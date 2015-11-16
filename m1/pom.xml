@@ -11,5 +11,11 @@
 
     <artifactId>M1</artifactId>
 
-
+    <dependencies>
+        <dependency>
+            <groupId>org.alma.csa</groupId>
+            <artifactId>M2</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
 </project>

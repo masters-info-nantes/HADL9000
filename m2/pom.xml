@@ -11,12 +11,4 @@
 
     <artifactId>M2</artifactId>
 
-    <dependencies>
-        <dependency>
-            <groupId>org.alma.csa</groupId>
-            <artifactId>M1</artifactId>
-            <version>1.0-SNAPSHOT</version>
-        </dependency>
-    </dependencies>
-
 </project>
