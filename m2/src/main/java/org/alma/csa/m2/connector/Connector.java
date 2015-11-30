@@ -22,10 +22,10 @@ public abstract class Connector {
 	}
 
 	public boolean removePort(Role role) {
-		if(role.getConnectionType() == ConnectionType.REQUIRED)
-			return portsRequired.remove(port);
+		if(role.getDirectionType() == DirectionType.FROM)
+			return rolesFrom.remove(role);
 		else
-			return portsProvided.remove(port);
+			return rolesTo.remove(role);
 	}
 	
 	public void addRoles(Role...roles) {
