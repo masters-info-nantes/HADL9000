@@ -5,5 +5,18 @@ package org.alma.csa.m2.connectioninterface;
  */
 public class Role extends ConnectionPoint {
 
-	public DirectionType direction;
+	public DirectionType direction = null;
+
+	public boolean setDirectionType(DirectionType direction) {
+		if(this.direction == null) {
+			this.direction = direction;
+			return true;
+		} else
+			return false;
+
+	}
+
+	public DirectionType getDirectionType() {
+		return direction;
+	}
 }
