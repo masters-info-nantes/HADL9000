@@ -1,4 +1,4 @@
-package org.alma.csa.m1;
+package org.alma.csa.m1.client;
 
 import org.alma.csa.m2.composite.Component;
 
