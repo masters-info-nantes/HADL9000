@@ -5,7 +5,9 @@ package org.alma.csa.m2.connectioninterface;
  */
 public class Role extends ConnectionPoint {
 
-	public DirectionType direction = null;
+	private DirectionType direction = null;
+	private Port port = null;
+	
 
 	public boolean setDirectionType(DirectionType direction) {
 		if(this.direction == null) {
@@ -19,4 +21,14 @@ public class Role extends ConnectionPoint {
 	public DirectionType getDirectionType() {
 		return direction;
 	}
+
+	public Port getPort() {
+		return port;
+	}
+
+	public void setPort(Port port) {
+		this.port = port;
+	}
+	
+	
 }

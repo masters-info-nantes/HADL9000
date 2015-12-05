@@ -1,10 +1,23 @@
 package org.alma.csa.m2.connector;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import org.alma.csa.m2.composite.Composite;
 import org.alma.csa.m2.connectioninterface.Role;
 
 public class ComplexConnector extends Connector {
 
-	public ComplexConnector() {
+	private List<Composite> components = new ArrayList<Composite>();
+
+	public List<Composite> getComponents() {
+		return components;
 	}
+
+	public void addComponent(Composite c) {
+		this.components.add(c);
+	}
+	
+	
 
 }
