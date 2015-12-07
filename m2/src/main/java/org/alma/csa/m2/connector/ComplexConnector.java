@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.alma.csa.m2.composite.Composite;
-import org.alma.csa.m2.connectioninterface.Role;
 
 public class ComplexConnector extends Connector {
 

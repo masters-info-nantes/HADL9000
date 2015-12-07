@@ -5,7 +5,6 @@ import java.util.List;
 
 import org.alma.csa.m2.connectioninterface.ConfigPort;
 import org.alma.csa.m2.connectioninterface.ConnectionType;
-import org.alma.csa.m2.connectioninterface.Port;
 
 /**
  * Created by Maxime on 16/11/2015.

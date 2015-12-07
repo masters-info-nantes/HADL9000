@@ -5,7 +5,7 @@ package org.alma.csa.m2.connectioninterface;
  */
 public class Role extends ConnectionPoint {
 
-	private DirectionType direction = null;
+	private DirectionType direction = DirectionType.TO;
 	private Port port = null;
 	
 

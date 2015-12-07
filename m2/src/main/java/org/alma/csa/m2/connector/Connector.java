@@ -3,11 +3,9 @@ package org.alma.csa.m2.connector;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.alma.csa.m2.connectioninterface.ConnectionType;
 import org.alma.csa.m2.connectioninterface.InternalRole;
 import org.alma.csa.m2.connectioninterface.Role;
 import org.alma.csa.m2.connectioninterface.DirectionType;
-import org.alma.csa.m2.exceptions.HADLMinimumMultiplicityException;
 
 public abstract class Connector {
 	

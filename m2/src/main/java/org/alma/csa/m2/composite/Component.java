@@ -2,6 +2,8 @@ package org.alma.csa.m2.composite;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Observable;
+import java.util.Observer;
 
 import org.alma.csa.m2.connectioninterface.ConnectionType;
 import org.alma.csa.m2.connectioninterface.Port;
@@ -10,7 +12,7 @@ import org.alma.csa.m2.connectioninterface.Service;
 /**
  * Created by Maxime on 16/11/2015.
  */
-public class Component extends Composite<Port> {
+public class Component extends Composite implements Observer {
 	
 	List<Service> servicesRequired = new ArrayList<Service>();
 	List<Service> servicesProvided = new ArrayList<Service>();
@@ -71,6 +73,14 @@ public class Component extends Composite<Port> {
 					break;
 			}
 		}
+	}
+
+	public void update(Observable arg0, Object arg1) {
+		System.out.println("[" + this.getClass().getName() + ". update]: " + arg1.toString());
+		
+		this.setChanged();
+        this.notifyObservers(arg1);
+		
 	}
 	
 }

@@ -1,9 +1,11 @@
 package org.alma.csa.m2.connectioninterface;
 
+import java.util.Observable;
+
 /**
  * Created by Maxime on 16/11/2015.
  */
-public abstract class ConnectionInterface {
+public abstract class ConnectionInterface extends Observable {
 
 
     private SynchronizationType synchronizationType = null;

@@ -7,7 +7,7 @@ import java.util.List;
  * Created by Maxime on 16/11/2015.
  */
 public class Port extends ConnectionPoint {
-    private ConnectionType connectionType = null;
+    private ConnectionType connectionType = ConnectionType.REQUIRED;
     private Role role = null;
     private List<Service> services = new ArrayList<Service>();
 
@@ -40,7 +40,13 @@ public class Port extends ConnectionPoint {
 		this.services.add(service);
 	}
 	
-	
+	public void transfer(Object message){
+
+        System.out.println("Port (" + this.getClass().getName() + ") forwards " + message);
+        
+        this.setChanged();
+        this.notifyObservers(message);
+    }
     
     
 }
